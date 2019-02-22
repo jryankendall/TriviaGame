@@ -11,17 +11,80 @@
 
 </head>
 <body>
+    <div class="container quiz-setup-pane d-flex flex-column">
 
-    <div class="container whole-quiz-container">
-        <div class="row very-top-row">
+        <div class="row">
+            <div>
+                <h2>Trivia Setup!</h2>
+            </div>
+        </div>
 
+        <div class="row">
+            <form>
+                <h3>Category Select</h3>
+                <div class="form-check form-check-inline category-select-div">
+                    <input class="form-check-input" type="radio" name="category-radios" id="sports-bubble" value="sports" checked>
+                    <label class="form-check-label" for="sports-bubble">
+                        Sports
+                    </label>
+                </div>
+                <div class="form-check form-check-inline category-select-div">
+                    <input class="form-check-input" type="radio" name="category-radios" id="vgames-bubble" value="video-games">
+                    <label class="form-check-label" for="vgames-bubble">
+                        Video Games
+                    </label>
+                </div>
+                <div class="form-check form-check-inline category-select-div">
+                    <input class="form-check-input" type="radio" name="category-radios" id="computers-bubble" value="computers">
+                    <label class="form-check-label" for="computers-bubble">
+                        Computers
+                    </label>
+                </div>
+                <div class="form-check form-check-inline category-select-div">
+                    <input class="form-check-input" type="radio" name="category-radios" id="books-bubble" value="books">
+                    <label class="form-check-label" for="books-bubble">
+                        Books
+                    </label>
+                </div>
+                <hr>
+
+                <h3>Question Types</h3>
+                <div class="form-check form-check-inline type-select-div">
+                    <input class="form-check-input" type="radio" name="type-radios" id="any-bubble" value="any" checked>
+                    <label class="form-check-label" for="any-bubble">
+                        Any
+                    </label>
+                </div>
+                <div class="form-check form-check-inline type-select-div">
+                    <input class="form-check-input" type="radio" name="type-radios" id="tf-bubble" value="true-false">
+                    <label class="form-check-label" for="tf-bubble">
+                        True/False
+                    </label>
+                </div>
+                <div class="form-check form-check-inline type-select-div">
+                    <input class="form-check-input" type="radio" name="type-radios" id="mc-bubble" value="multiple-choice">
+                    <label class="form-check-label" for="mc-bubble">
+                        Multiple Choice
+                    </label>
+                </div>
+
+                <hr>
+                <button type="button" class="btn btn-primary" id="begin-button"><p>Begin</p></button>
+                
+            </form>
         </div>
         
-        <div class="row second-row">
-            
-        </div>
+    </div>
 
-        <div class="row third-row">
+    <div class="container whole-quiz-container d-flex flex-column">
+        <div class="row">
+            <h1>Quiz Going On Below</h1>
+        </div>
+        
+        <div class="row">
+            <div class="col-12 quiz-column">
+                
+            </div>
             
         </div>
     </div>
@@ -38,6 +101,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+    <script type="text/javascript" src="assets/javascript/formresults.js"></script>
+    <script type="text/javascript" src="assets/javascript/querybuilder.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>

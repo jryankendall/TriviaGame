@@ -2,7 +2,7 @@ html {
     font-size: 62.5%;
 }
 
-p {
+p, label, input {
     font-size: 1.6rem;
 }
 
@@ -16,4 +16,13 @@ h2 {
 
 h1 {
     font-size: 4rem;
+}
+
+
+body {
+    background-image: url("../images/prism.png");
+}
+
+.row {
+    border: solid 1px gray;
 }

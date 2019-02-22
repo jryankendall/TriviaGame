@@ -1,0 +1,57 @@
+$neon-high-contrast : (
+
+    'primary' : #0e0b16,
+    'secondary' : #a239ca,
+    'tertiary' : #4717f6,
+    'quaternary' : #e7dfdd,
+    'primaryfont' : #ddd,
+    'secondaryfont' : #564f4f
+    
+);
+
+$muted-minimal : (
+
+    'primary' : #96858f,
+    'secondary' : #6d7993,
+    'tertiary' : #9099a2,
+    'quaternary' : #d5d5d5,
+    'primaryfont' : #333333,
+    'secondaryfont' : #fcfbfc
+
+);
+
+$warm-tones : ( 
+
+    'primary' : #d7cec7,
+    'secondary' : #565656,
+    'tertiary' : #76323f,
+    'quaternary' : #c09f80,
+    'primaryfont' :  #7C798A,
+    'secondaryfont' : #fcfbfc
+
+);
+
+$cool-warm : (
+
+    'primary' : #18121e,
+    'secondary' : #233237,
+    'tertiary' : #984b43,
+    'quaternary' : #eac67a,
+    'primaryfont' : #efefef,
+    'secondaryfont' : #564f4f
+
+);
+
+$palette : $neon-high-contrast;
+
+$primary-color: map-get($palette, 'primary');
+
+$secondary-color: map-get($palette, 'secondary');
+
+$tertiary-color: map-get($palette, 'tertiary');
+
+$quaternary-color: map-get($palette, 'quaternary');
+
+$primary-font: map-get($palette, 'primaryfont');
+
+$secondary-font: map-get($palette, 'secondaryfont');

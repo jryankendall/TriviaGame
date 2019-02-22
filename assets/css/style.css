@@ -2,7 +2,7 @@ html {
   font-size: 62.5%;
 }
 
-p {
+p, label, input {
   font-size: 1.6rem;
 }
 
@@ -16,6 +16,30 @@ h2 {
 
 h1 {
   font-size: 4rem;
+}
+
+body {
+  background-image: url("../images/prism.png");
+}
+
+.row {
+  border: solid 1px gray;
+}
+
+.quiz-setup-pane {
+  background-color: #0e0b16;
+  height: 600px;
+  border: solid 2px white;
+  color: #ddd;
+}
+
+.category-select-div {
+  padding: 2px 20px 2px 10px;
+}
+
+.whole-quiz-container {
+  background-color: #0e0b16;
+  color: #ddd;
 }
 
 /*# sourceMappingURL=style.css.map */
