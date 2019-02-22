@@ -37,8 +37,8 @@ function formResults() {
     }
 
     queryURLBuilder();
-    getQuestions();
     hideSetupPane();
     showQuizPane();
+    getQuestions();
 
 }

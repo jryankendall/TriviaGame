@@ -36,12 +36,7 @@ var triviaObjects;
 
 function printQuestions(response) {
     triviaObjects = response.results;
-    console.log(triviaObjects);
-    /* for (i = 0; i < triviaObjects.length; i++) {
-
-        var newDiv = $("<div>");
-
-        newDiv.addClass("form-check answer-option");
-        newDiv.append(setQuestionAnswers(triviaObjects[i], i));
-    }*/
+    for (i = 0; i < triviaObjects.length; i++) {
+        setQuestionAnswers(triviaObjects[i], i);
+    }
 }
