@@ -42,7 +42,7 @@ $cool-warm : (
 
 );
 
-$palette : $neon-high-contrast;
+$palette : $cool-warm;
 
 $primary-color: map-get($palette, 'primary');
 

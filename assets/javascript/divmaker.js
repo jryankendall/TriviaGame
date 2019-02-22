@@ -17,16 +17,18 @@ function setQuestionAnswers(questionGot, questionNum) {
     //sets up the whole question/answer container
     var newSlotDiv = $("<div>");
     newSlotDiv.addClass("quiz-slot");
+    newSlotDiv.attr("id", "question-" + questionNum + "-div");
     var newH3 = $("<h3>");
+    newH3.addClass("question-header");
     newH3.attr("id", "question-" + questionNum + "-header");
-    newH3.text(questionGot.question);
+    newH3.html(questionNum+1 + ". " + questionGot.question);
     newSlotDiv.append(newH3);
 
-    for (i = 0; i < questionGot.incorrect_answers.length; i++) {
+    for (var i = 0; i < questionGot.incorrect_answers.length; i++) {
         unrandAnswers.push(questionGot.incorrect_answers[i]);
     }
 
-    for (i = 0; i < questionGot.incorrect_answers.length + 1; i++) {
+    for (var i = 0; i < questionGot.incorrect_answers.length + 1; i++) {
 
         //Gives every answer essentially a 1 in X chance to be filled with the right answer, where X is 
         //the number of unfilled answers left. If it gets to the last entry and the right answer is still not a choice
@@ -53,10 +55,11 @@ function setQuestionAnswers(questionGot, questionNum) {
     }
 
     //Actually printing the answers out in the document
-    for (i = 0; i < answersArr.length; i++) {
+    for (var i = 0; i < answersArr.length; i++) {
         var newDiv1 = $("<div>");
         var newInput = $("<input>");
         var newLabel = $("<label>");
+        var choiceLetters = ["A", "B", "C", "D"];
 
         //adding classes to the new elements
         newDiv1.addClass("question-answer form-check");
@@ -71,7 +74,7 @@ function setQuestionAnswers(questionGot, questionNum) {
 
         //labels
         newLabel.attr("for", "q-" + questionNum + "-ans-" + i);
-        newLabel.text("A - " + answersArr[i]);
+        newLabel.html(" " + choiceLetters[i] + " - " + answersArr[i]);
 
         newDiv1.append(newInput);
         newDiv1.append(newLabel);

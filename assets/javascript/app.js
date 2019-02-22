@@ -22,6 +22,13 @@ function initHandlers() {
     })
 }
 
+function initSubmitHandler() {
+    $("#send-quiz-button").on("click", function() {
+        sendQuizAnswers();
+        quizSubmitted = true;
+    })
+}
+
 
 function getQuestions() {
     $.ajax({
@@ -36,7 +43,22 @@ var triviaObjects;
 
 function printQuestions(response) {
     triviaObjects = response.results;
-    for (i = 0; i < triviaObjects.length; i++) {
+    for (var i = 0; i < triviaObjects.length; i++) {
         setQuestionAnswers(triviaObjects[i], i);
     }
+
+    printSubmitButton();
+}
+
+var quizSubmitted = false;
+
+function printSubmitButton() {
+    var newButton = $("<button>");
+    newButton.attr("type", "button");
+    newButton.addClass("btn btn-danger")
+    newButton.attr("id", "send-quiz-button");
+    newButton.html("<p>Submit Answers</p>");
+    $("#quiz-form").append(newButton);
+
+    initSubmitHandler();
 }

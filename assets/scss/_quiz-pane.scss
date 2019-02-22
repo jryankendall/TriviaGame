@@ -1,8 +1,22 @@
 .whole-quiz-container {
-    background-color: $primary-color;
+    background-color: $secondary-color;
     color: $primary-font;
 }
 
 .question-answer {
     color: $secondary-font;
+    background-color: $quaternary-color;
+}
+
+.quiz-slot {
+    background-color: $tertiary-color;
+}
+
+.question-header {
+    margin-top: 24px;
+}
+
+#send-quiz-button {
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
