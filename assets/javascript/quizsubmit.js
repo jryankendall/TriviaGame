@@ -22,6 +22,8 @@ function sendQuizAnswers() {
 
     displayPlayerScore(playerScorePercent, correctQuestions);
 
+    $("#send-quiz-button").addClass("d-none");
+
 }
 
 function displayPlayerScore(scorePercent, correctArray) {
@@ -37,4 +39,5 @@ function displayPlayerScore(scorePercent, correctArray) {
     }
 
     console.log("Player Score: " + scorePercent + "% Correct");
+    $(".form-check-input").prop("disabled", true);
 }

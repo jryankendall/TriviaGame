@@ -1,5 +1,6 @@
 var baseURL = "https://opentdb.com/api.php?";
-var qAmount = "10";
+var qAmountInteger = 10;
+var qAmount = qAmountInteger.toString();
 var qCategory = "";
 var qDifficulty = "";
 var qType = "";

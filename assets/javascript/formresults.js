@@ -40,5 +40,6 @@ function formResults() {
     hideSetupPane();
     showQuizPane();
     getQuestions();
+    beginTimer();
 
 }

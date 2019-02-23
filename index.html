@@ -14,13 +14,13 @@
     <div class="container quiz-setup-pane d-flex flex-column">
 
         <div class="row">
-            <div>
+            <div class="col-12">
                 <h2>Trivia Setup!</h2>
             </div>
         </div>
 
         <div class="row">
-            <form>
+            <form class="col-12 setup-form">
                 <h3>Category Select</h3>
                 <div class="form-check form-check-inline category-select-div">
                     <input class="form-check-input" type="radio" name="category-radios" id="sports-bubble" value="sports" checked>
@@ -73,12 +73,38 @@
                 
             </form>
         </div>
+
+        <div class="row">
+
+            <div class="col-12">
+                <h2>Instructions</h2>
+                <p>You must be using this document through an online page, as it retrieves data through an API.</p>
+                <br>
+                <p>You will have <span id="time-limit-spot"></span> seconds to complete this trivia quiz.</p>
+                <p>Any questions left blank or without an answer will be considered incorrect, so it's in your interests to answer all questions!</p>
+                <br>
+                <p>The timer, which will be displayed at the top of your screen, will start once you click the Begin button above. When you are finished with the quiz, click the Submit button at the bottom of the page. If the timer hits 0, your quiz will automatically be submitted, so don't worry if you cut it close.</p>
+
+                <p class="red-text">PLEASE NOTE there are no True/False questions in the Books category of the API, so selecting that combination will just give you nothing.</p>
+
+                <p>Questions and Answers courtesy of the <a href="https://opentdb.com/">Open Trivia Database</a> API, used under the Attribution-ShareAlike 4.0 International license.</p>
+            </div>
+
+        </div>
         
     </div>
 
-    <div class="container whole-quiz-container flex-column">
+    <div class="timer-row d-none flex-row justify-content-center" id="quiz-timer">
+        <div class="timer-column">
+            <h2>Seconds Left: <span id="time-display">80</span></h2>
+            
+        </div>
+    </div>
+
+    <div class="container whole-quiz-container d-none flex-column">
+
         <div class="row">
-            <h1>Quiz Going On Below</h1>
+            <h1>Answer the Following:</h1>
         </div>
 
         <div class="col-12 whole-quiz-col">
@@ -115,6 +141,7 @@
     <script type="text/javascript" src="assets/javascript/divmaker.js"></script>
     <script type="text/javascript" src="assets/javascript/formresults.js"></script>
     <script type="text/javascript" src="assets/javascript/querybuilder.js"></script>
+    <script text="text/javascript" src="assets/javascript/timer.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>

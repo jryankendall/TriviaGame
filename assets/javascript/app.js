@@ -6,6 +6,8 @@ function hideSetupPane() {
 function showQuizPane() {
     $(".whole-quiz-container").removeClass("d-none");
     $(".whole-quiz-container").addClass("d-flex");
+    $("#quiz-timer").removeClass("d-none");
+    $("#quiz-timer").addClass("d-flex");
 }
 
 $( function() {
@@ -13,19 +15,20 @@ $( function() {
 })
 
 function initHandlers() {
-    $(".trivia-response-button").on("click", function() {
-
-    });
 
     $("#begin-button").on("click", function() {
         formResults();
+        beginTimer();
     })
+
+    $("#time-limit-spot").text(timeLimit);
 }
 
 function initSubmitHandler() {
     $("#send-quiz-button").on("click", function() {
         sendQuizAnswers();
         quizSubmitted = true;
+        haltTimer();
     })
 }
 
