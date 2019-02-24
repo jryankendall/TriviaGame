@@ -12,7 +12,6 @@ function setQuestionAnswers(questionGot, questionNum) {
     var answersArr = [];
     var rightAnswer = questionGot.correct_answer;
     var rightAnswerAssigned = false;
-    var correctChance = Math.random();
 
     //sets up the whole question/answer container
     var newSlotDiv = $("<div>");
@@ -29,6 +28,8 @@ function setQuestionAnswers(questionGot, questionNum) {
     }
 
     for (var i = 0; i < questionGot.incorrect_answers.length + 1; i++) {
+        
+        var correctChance = Math.random();
 
         //Gives every answer essentially a 1 in X chance to be filled with the right answer, where X is 
         //the number of unfilled answers left. If it gets to the last entry and the right answer is still not a choice
